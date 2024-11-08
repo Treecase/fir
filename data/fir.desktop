@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=1.5
+Name=Fir
+Name[en_US]=fir
+GenericName=Image Viewer
+Icon=com.github.treecase.fir
+Exec=fir %F
+MimeType=image/bmp;image/gif;image/jpeg;image/png;image/tiff;image/webp;image/vnd.microsoft.icon
+Categories=Graphics;2DGraphics;RasterGraphics;Viewer

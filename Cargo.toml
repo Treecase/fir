@@ -1,0 +1,26 @@
+[package]
+name = "fir"
+version = "0.1.0"
+edition = "2021"
+description = "A simple image viewer for Wayland."
+readme = "README.md"
+repository = "https://github.com/Treecase/fir"
+license = "GPL-3.0-or-later"
+keywords = ["wayland", "viewer"]
+categories = ["graphics"]
+include = [
+    "src/**/*.rs",
+    "Cargo.toml",
+    "README.md",
+]
+
+[dependencies]
+derive_more = { version="1.0.0", features = ["from"] }
+enum-iterator = "2.1.0"
+env_logger = "0.11.5"
+image = "0.25.4"
+log = "0.4.22"
+sdl2 = "0.37.0"
+serde = { version = "1.0.214", features = ["derive"]}
+toml = "0.8.19"
+xdg = "2.5.2"
