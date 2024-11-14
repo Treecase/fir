@@ -23,20 +23,20 @@ shift_amount = 16
 # Size in pixels of the background grid squares.
 size = 16
 # Color of the darker grid squares.
-color_dark = #404040
+color_dark = "#404040"
 # Color of the lighter grid squares.
-color_light = #808080
+color_light = "#808080"
 
 # This table defines the keybinds. As of now, the default binds are always loaded first, so you can only overwrite them, not get rid of them entirely. This will be fixed in the future. Also, not all keys are bindable, since the SDL key names are not all valid as toml identifiers. This will be fixed in a future version. I've added a hack to somewhat mitigate this issue by allowing underscores to replace spaces in key names. A list of key names can be found [here](https://github.com/libsdl-org/SDL/blob/SDL2/src/events/SDL_keyboard.c#L350).
 [binds]
-Up = ShiftUp
-Down = ShiftDown
-Left = ShiftLeft
-Right = ShiftRight
-Keypad_0 = ResetTransform
-F = ToggleFullscreen
-Q = Quit
+Up = "ShiftUp"
+Down = "ShiftDown"
+Left = "ShiftLeft"
+Right = "ShiftRight"
+Keypad_0 = "ResetTransform"
+F = "ToggleFullscreen"
+Q = "Quit"
 # These two are some of the keys whose names aren't valid toml, so their bindings can't actually be changed from the defaults. Sorry.
-#Keypad_+ = ZoomIn
-#Keypad_- = ZoomOut
+#Keypad_+ = "ZoomIn"
+#Keypad_- = "ZoomOut"
 ```
