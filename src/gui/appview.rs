@@ -235,7 +235,7 @@ impl<'a> AppView<'a> {
     fn toggle_fullscreen(&mut self) {
         let w = self.canvas.window_mut();
         let t = match w.fullscreen_state() {
-            sdl2::video::FullscreenType::Off => sdl2::video::FullscreenType::True,
+            sdl2::video::FullscreenType::Off => sdl2::video::FullscreenType::Desktop,
             sdl2::video::FullscreenType::True => sdl2::video::FullscreenType::Off,
             sdl2::video::FullscreenType::Desktop => sdl2::video::FullscreenType::Off,
         };

@@ -13,6 +13,8 @@ use std::path::PathBuf;
 mod appview;
 mod texture;
 
+const MIN_SIZE: (u32, u32) = (256, 256);
+
 /// Entry point of the GUI.
 ///
 /// This function serves as the core event loop of the program. It initializes SDL2, creates the
@@ -33,7 +35,10 @@ pub fn start(files: Vec<PathBuf>, config: Config) -> Result<(), Box<dyn Error>> 
     for path in files {
         let image = ImageReader::open(&path)?.decode()?;
         let window = canvas.window_mut();
-        let _ = window.set_size(image.width(), image.height());
+        let _ = window.set_size(
+            image.width().max(MIN_SIZE.0),
+            image.height().max(MIN_SIZE.1),
+        );
         let _ = window.set_title(format!("{} - {}", meta::NAME, path.display()).as_str());
 
         let image_texture = img_factory.construct_from_image(&image)?;
